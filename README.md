@@ -81,6 +81,8 @@ Adımların arasına bekleme koyabilirsin (ör. aç, 2 dakika bekle, oyunu başl
 1. Telefondan **[HeyOnLan.apk](https://github.com/Hazallul/HeyOnLan-surumler/releases/latest/download/HeyOnLan.apk)** dosyasını indir.
 2. Dosyayı aç. "Bilinmeyen uygulamalar" uyarısı çıkarsa **Ayarlar → Bu kaynaktan izin ver** de, sonra **Yükle**.
 
+> Play Protect "uygulamayı tanımıyor, taramaya gönder" derse **taramayı** seç; tarama bitince kurulum sürer. Google her yeni sürümü ilk kez gördüğü için bu uyarı güncellemelerde de çıkabilir, normaldir.
+
 ### 2. Bilgisayarı hazırla
 1. Bilgisayardan **[HeyOnLan-Kurulum.bat](https://github.com/Hazallul/HeyOnLan-surumler/releases/latest/download/HeyOnLan-Kurulum.bat)** dosyasını indir.
 2. Çift tıkla, izin sorarsa **Evet** de.
@@ -96,7 +98,7 @@ Bilgisayar kapalıyken açılabilmesi için BIOS'ta **Wake on LAN** açık olmal
 
 ## Güncelleme
 
-Yeni sürüm çıkınca uygulamanın menüsünde **YENİ SÜRÜM** yazar. **İndir**'e bas, açılan dosyayı kur. Eski uygulamanın üstüne kurulur; **silmen gerekmez, ayarların kalır.**
+Yeni sürüm çıkınca uygulamanın menüsünde **YENİ SÜRÜM** yazar. **İndir**'e bas, açılan dosyayı kur. Eski uygulamanın üstüne kurulur; **silmen gerekmez, ayarların kalır.** Play Protect tarama önerirse yukarıdaki gibi taramayı seç.
 
 Yeni özellikler bilgisayardaki kurulumun da güncel olmasını isteyebilir (uygulama "kurulum eski" der). O zaman **HeyOnLan-Kurulum.bat**'ı bilgisayarda bir kez daha çalıştırman yeterli; **yeniden eşleştirmen gerekmez.**
 
