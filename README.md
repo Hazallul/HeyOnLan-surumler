@@ -89,9 +89,9 @@ Adımların arasına bekleme koyabilirsin (ör. aç, 2 dakika bekle, oyunu başl
 > Play Protect "uygulamayı tanımıyor, taramaya gönder" derse **taramayı** seç; tarama bitince kurulum sürer. Google her yeni sürümü ilk kez gördüğü için bu uyarı güncellemelerde de çıkabilir, normaldir.
 
 ### 2. Bilgisayarı hazırla
-1. Bilgisayardan **[HeyOnLan-Kurulum.bat](https://github.com/Hazallul/HeyOnLan-surumler/releases/latest/download/HeyOnLan-Kurulum.bat)** dosyasını indir.
-2. Çift tıkla, izin sorarsa **Evet** de.
-3. Pencerede bir **IP** (ör. 192.168.1.40) ve **6 haneli kod** çıkar. Pencereyi kapatma.
+1. Bilgisayardan **[son sürüm sayfasını](https://github.com/Hazallul/HeyOnLan-surumler/releases/latest)** aç ve `HeyOnLan-<sürüm>.exe` dosyasını indir.
+2. Çift tıkla, **Kur**'a bas, izin sorarsa **Evet** de.
+3. Kurulum bitince bir **IP** (ör. 192.168.1.40) ve **6 haneli kod** çıkar. Pencereyi kapatma.
 
 > Windows "bilgisayarınız korundu" derse **Ek bilgi → Yine de çalıştır**'a bas.
 
@@ -105,21 +105,21 @@ Bilgisayar kapalıyken açılabilmesi için BIOS'ta **Wake on LAN** açık olmal
 
 Yeni sürüm çıkınca uygulamanın menüsünde **YENİ SÜRÜM** yazar. **Güncelle**'ye bas; uygulama yeni sürümü kendisi indirip kurar, **ayarların kalır.** İlk seferde Android "bu uygulama başka uygulama yükleyebilsin mi?" diye bir kez izin ister. Play Protect tarama önerirse yukarıdaki gibi taramayı seç.
 
-Bilgisayardaki kurulum da **kendiliğinden güncellenir**: uygulama bilgisayarın eski kaldığını görünce yenisini kurdurur, sana bir şey yaptırmaz. Bilgisayar yeni dosyayı sadece bu sayfadaki sürümlerden indirir ve uygulamanın beklediği dosyayla birebir aynı değilse kurmaz.
+Bilgisayardaki kurulum da **kendiliğinden güncellenir**: uygulama bilgisayarın eski kaldığını görünce yenisini kurdurur, sana bir şey yaptırmaz. Eskiden kurulum dosyasıyla (bat) kurduysan bilgisayar bu güncellemeyle HeyOnLan uygulamasına geçer. Bilgisayar yeni dosyayı sadece bu sayfadaki sürümlerden indirir ve uygulamanın beklediği dosyayla birebir aynı değilse kurmaz.
 
-> **1.4'ten önceki sürümlerden geçiyorsan (3.x):** bu sefer bir kereliğine elle yap: telefona yeni APK'yı kur, bilgisayarda **HeyOnLan-Kurulum.bat**'ı bir kez çalıştır (yeniden eşleştirmen gerekmez). Sonraki güncellemeler kendiliğinden gelir.
+> **1.4'ten önceki sürümlerden geçiyorsan (3.x):** bu sefer bir kereliğine elle yap: telefona yeni APK'yı kur, bilgisayarda **HeyOnLan-<sürüm>.exe**'yi bir kez çalıştır (yeniden eşleştirmen gerekmez). Sonraki güncellemeler kendiliğinden gelir.
 
 ## Çalışmıyorsa
 
 - **Açılmıyor:** ethernet kablosu takılı mı, BIOS'ta Wake on LAN açık mı? Telefon aynı Wi-Fi'da mı?
 - **Kapanmıyor / komutlar gitmiyor:** uygulamada **Bağlantı → Test et**. Sorunu adım adım gösterir.
-- **"Kurulum eski" ya da "güncellenemedi" diyor:** bat dosyasını bilgisayarda bir kez çalıştır.
+- **"Kurulum eski" ya da "güncellenemedi" diyor:** son sürümün exe'sini bilgisayarda bir kez çalıştır.
 - **IP değişti:** uygulama bilgisayarı ağda kendisi bulur; bulamazsa Bağlantı sayfasında test et.
 - **Otomasyon geç çalışıyor:** Otomasyon sayfasındaki **Tam saat izni** ve **Pil kısıtlamasını kaldır** uyarılarına bak.
 
 ## Kurulum bilgisayarda ne yapıyor?
 
-Bat dosyası düz metindir, Not Defteri ile açıp okuyabilirsin. Özetle:
+HeyOnLan.exe kendini `Program Files\HeyOnLan`'a kurar (Başlat menüsünde **HeyOnLan**) ve içindeki kurulum betiğini çalıştırır. Betik sürüm sayfasındaki `HeyOnLan-Kurulum.bat` ile aynıdır; düz metindir, Not Defteri ile açıp okuyabilirsin. Özetle:
 
 - Windows'un kendi **OpenSSH Server**'ını açar (telefon komutları bununla gönderir).
 - Bağlantıya **sadece ev ağından** izin verir, şifreyle girişi kapatır.
@@ -132,4 +132,4 @@ Bat dosyası düz metindir, Not Defteri ile açıp okuyabilirsin. Özetle:
 
 ---
 
-Bu depoda sadece uygulamanın sürümleri (APK) ve bilgisayar kurulum dosyası bulunur.
+Bu depoda sadece uygulamanın sürümleri bulunur: telefon (APK), saat (`HeyOnLan-Saat-<sürüm>.apk`) ve bilgisayar (exe). `HeyOnLan-Kurulum.bat` çok eski kurulumların kendini güncelleyebilmesi için duruyor.
